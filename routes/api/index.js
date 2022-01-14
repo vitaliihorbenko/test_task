@@ -16,7 +16,7 @@ router.get("/api/objects/categories", async (ctx) => {
   }
 });
 
-router.get("/api/objects/categories/:category", async (ctx) => {
+router.get("/api/objects/:category", async (ctx) => {
   try {
     const { category } = ctx.request.params;
     const objects = await Object.find({ category: category });
